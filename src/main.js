@@ -5,7 +5,7 @@ import index from './index.vue'
 Vue.use(vueRouter)
 
 
-import vizGallery from './components/viz-gallery.vue'
+import vizGallery from './components/viz-gallery-container.vue'
 
 Vue.config.productionTip = false
 
