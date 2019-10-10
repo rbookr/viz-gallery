@@ -1,6 +1,6 @@
 <style lang="scss" scoped>
 .viz-gallery {
-
+    margin: 50px 0;
     .viz-gallery-control{
         display: flex;
         justify-content: flex-end;
@@ -21,7 +21,8 @@
         justify-content: center;
         align-items: center;
     }
-    .log {
+
+    div.viz-gallery-title, .log {
         text-align: center;
     }
 }
