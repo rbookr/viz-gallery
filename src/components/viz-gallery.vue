@@ -2,12 +2,15 @@
 div.viz-gallery
     div.viz-gallery-title
         h3 {{title}} 
-    div(ref="imageDiv")
+    div.viz-gallery-control
     button.pre-frame(@click="renderPre" :disabled="nowFrame==0") Pre
     button.next-frame(@click="renderNex" :disabled="nowFrame ==vizData.length-1") Nex
     .frame-info
         span.now-frame {{nowFrame+1}}/
         span.total-frame {{vizData.length}}
+    div.log
+        p {{vizData[nowFrame].log || ''}}
+    div(ref="imageDiv")
 </template>
 
 <script>
@@ -17,7 +20,7 @@ export default {
             name:'rain',
             vizIns:{},
             nowFrame:0,
-            image:""
+            image:"",
         }
     },
     mounted(){
@@ -26,7 +29,7 @@ export default {
             this.render(0)
     },
     props:{
-        viz:String,
+        data:String,
         title:String,
         engine:{
             type:String,
@@ -36,7 +39,8 @@ export default {
     methods:{
         render(i){
             var self = this
-            this.vizIns.renderImageElement(this.vizData[i],{engine:this.engine || "dot"})
+            let engine = this.vizData[i].engine || this.engine || "dot"
+            this.vizIns.renderImageElement(this.vizData[i].src,{engine})
                 .then(function(element){
                     self.image = element
                     while( self.$refs.imageDiv.firstChild )
@@ -57,7 +61,7 @@ export default {
     },
     computed:{
         vizData(){
-            return JSON.parse(this.viz)
+            return JSON.parse(this.data)
         }
     }
 }

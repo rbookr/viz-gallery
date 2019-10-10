@@ -9,10 +9,10 @@
     <script src="./viz-gallery/viz-gallery.js"></script>
 </head>
 <body>
-    <viz-gallery viz='["graph g {\n    compound=true;\n    node[shape=circle];\n    1--no[lhead=cluster_1];\n    subgraph cluster_1{\n        no[shape=point height=0]\n        x--no--y;\n        {\n            rank=\"same\";\n            x,y,no;\n        }\n    }\n    no--{3,4}[ltail=cluster_1];\n    1--{3,4};\n    {\n        rank=\"min\";\n        1;\n    }\n}","graph g {\n    compound=true;\n    node[shape=circle];\n    1--{x,y};\n    x--y;\n        {\n            rank=\"same\";\n            x,y;\n        }\n    {x,y}--3;\n    y--4;\n    x--4;\n    //x--4;\n    1--{3,4};\n    {\n        rank=\"min\";\n        1;\n    }\n}"]
-        ' title="viz-gallery-demo" engine="dot"></viz-gallery>
 
-    <script>
-    </script>
+
+<viz-gallery data="[{&quot;engine&quot;:null,&quot;log&quot;:null,&quot;src&quot;:&quot;graph G{\n  a--b;\n}&quot;},{&quot;engine&quot;:&quot;neato&quot;,&quot;log&quot;:&quot;这是 log&quot;,&quot;src&quot;:&quot;graph G{\n  a--c;\n}&quot;}]" title="demo" engine="dot"></viz-gallery>
+
+
 </body>
 </html>
