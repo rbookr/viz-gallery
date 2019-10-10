@@ -5,7 +5,8 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "build-viz-gallery":"vue-cli-service build --target wc --name viz-gallery --dest dist/viz-gallery src/components/viz-gallery.vue"
   },
   "dependencies": {
     "core-js": "^2.6.5",

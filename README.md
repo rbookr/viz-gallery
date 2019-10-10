@@ -1,29 +1,14 @@
 # web-components
 
-## Project setup
-```
-yarn install
-```
+传递的所有参数类型都是`string`
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
+## viz-gallery
 
-### Compiles and minifies for production
-```
-yarn run build
-```
+| 参数   | 作用                |
+|--------|---------------------|
+| `viz`  | 数组型`viz_src`     |
+| title  | 标题                |
+| engine | `dot`,`neato`,`...` |
 
-### Run your tests
-```
-yarn run test
-```
 
-### Lints and fixes files
-```
-yarn run lint
-```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

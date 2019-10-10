@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo</title>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://cdn.bootcss.com/viz.js/2.1.2-pre.1/viz.js"></script>
+    <script src="https://cdn.bootcss.com/viz.js/2.1.2-pre.1/full.render.js"></script>
+    <script src="./viz-gallery/viz-gallery.js"></script>
+</head>
+<body>
+    <viz-gallery viz='["graph g {\n    compound=true;\n    node[shape=circle];\n    1--no[lhead=cluster_1];\n    subgraph cluster_1{\n        no[shape=point height=0]\n        x--no--y;\n        {\n            rank=\"same\";\n            x,y,no;\n        }\n    }\n    no--{3,4}[ltail=cluster_1];\n    1--{3,4};\n    {\n        rank=\"min\";\n        1;\n    }\n}","graph g {\n    compound=true;\n    node[shape=circle];\n    1--{x,y};\n    x--y;\n        {\n            rank=\"same\";\n            x,y;\n        }\n    {x,y}--3;\n    y--4;\n    x--4;\n    //x--4;\n    1--{3,4};\n    {\n        rank=\"min\";\n        1;\n    }\n}"]
+        ' title="viz-gallery-demo" engine="dot"></viz-gallery>
+
+    <script>
+    </script>
+</body>
+</html>
