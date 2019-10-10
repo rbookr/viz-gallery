@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "build-viz-gallery":"vue-cli-service build --target wc --name viz-gallery --dest dist/viz-gallery src/components/viz-gallery.vue"
+    "build-viz-gallery": "vue-cli-service build --target wc --name viz-gallery --dest dist/viz-gallery src/components/viz-gallery.vue"
   },
   "dependencies": {
     "core-js": "^2.6.5",
@@ -21,6 +21,7 @@
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "pug-plain-loader": "^1.0.0",
+    "sass-loader": "^8.0.0",
     "vue-template-compiler": "^2.6.10"
   },
   "eslintConfig": {

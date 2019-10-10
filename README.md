@@ -10,11 +10,12 @@
  - viz.js
 
 
-| 参数   | 作用                |
-|--------|---------------------|
-| `data` | 数组型`viz_data`    |
-| title  | 标题                |
-| engine | `dot`,`neato`,`...` |
+| 参数     | 作用                |
+|----------|---------------------|
+| `data`   | 数组型`viz_data`    |
+| `title`  | 标题                |
+| `engine` | `dot`,`neato`,`...` |
+| `height` | 显示高度            |
 
 ```javascript
 viz_data = [
